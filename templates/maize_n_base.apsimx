@@ -1,0 +1,10 @@
+{
+  "Name": "APGym_MaizeN_Stub",
+  "Type": "StubTemplateForDryRun",
+  "Metadata": {
+    "apgym": {
+      "nitrogen_schedule": []
+    }
+  },
+  "ReportTables": ["Report", "SeasonSummary"]
+}

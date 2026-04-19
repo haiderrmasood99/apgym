@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "APGym Management Events",
+  "type": "object",
+  "required": ["site_id", "date", "event_type"],
+  "properties": {
+    "site_id": { "type": "string" },
+    "date": { "type": "string", "format": "date" },
+    "event_type": {
+      "type": "string",
+      "enum": ["planting", "harvest", "fertilizer", "irrigation", "tillage", "other"]
+    },
+    "crop": { "type": "string" },
+    "cultivar": { "type": "string" },
+    "amount_kg_ha": { "type": "number", "minimum": 0 },
+    "amount_mm": { "type": "number", "minimum": 0 },
+    "source": { "type": "string" },
+    "method": { "type": "string" },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": true
+}

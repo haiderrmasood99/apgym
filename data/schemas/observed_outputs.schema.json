@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "APGym Observed Outputs",
+  "type": "object",
+  "required": ["site_id", "season_year", "yield_t_ha"],
+  "properties": {
+    "site_id": { "type": "string" },
+    "season_year": { "type": "integer", "minimum": 1900, "maximum": 2200 },
+    "yield_t_ha": { "type": "number", "minimum": 0 },
+    "phenology_emergence_date": { "type": "string", "format": "date" },
+    "phenology_flowering_date": { "type": "string", "format": "date" },
+    "phenology_maturity_date": { "type": "string", "format": "date" },
+    "biomass_t_ha": { "type": "number", "minimum": 0 },
+    "season_irrigation_mm": { "type": "number", "minimum": 0 },
+    "season_et_mm": { "type": "number", "minimum": 0 },
+    "soil_water_profile_mm": { "type": "number", "minimum": 0 },
+    "soil_n_profile_kg_ha": { "type": "number", "minimum": 0 }
+  },
+  "additionalProperties": true
+}

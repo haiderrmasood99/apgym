@@ -1,0 +1,31 @@
+{
+  "site_identity": {
+    "site_id": ["Env", "site_id", "location"],
+    "latitude": ["Latitude", "lat"],
+    "longitude": ["Longitude", "lon"],
+    "season_year": ["Year", "season_year"],
+    "region": ["State", "region"],
+    "cultivar": ["Hybrid", "cultivar"]
+  },
+  "observed_outputs": {
+    "site_id": ["Env", "site_id", "location"],
+    "season_year": ["Year", "season_year"],
+    "yield": ["Yield_bu_ac", "yield_bu_ac", "grain_yield"]
+  },
+  "weather_daily": {
+    "site_id": ["Env", "site_id", "location"],
+    "date": ["Date", "date"],
+    "tmin_c": ["Tmin", "tmin"],
+    "tmax_c": ["Tmax", "tmax"],
+    "rain_mm": ["Rain", "rain"],
+    "rad_mj_m2": ["Radn", "radn"]
+  },
+  "management_events": {
+    "site_id": ["Env", "site_id", "location"],
+    "date": ["ApplicationDate", "event_date"],
+    "amount_kg_ha": ["N_rate", "n_kg_ha"],
+    "event_type": ["EventType", "event_type"],
+    "source": ["FertilizerSource", "source"],
+    "method": ["ApplicationMethod", "method"]
+  }
+}

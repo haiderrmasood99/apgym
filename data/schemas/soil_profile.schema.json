@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "APGym Soil Profile Layer",
+  "type": "object",
+  "required": [
+    "site_id",
+    "layer_top_mm",
+    "layer_bottom_mm",
+    "bulk_density",
+    "ll15",
+    "dul",
+    "sat",
+    "ph",
+    "oc_pct"
+  ],
+  "properties": {
+    "site_id": { "type": "string" },
+    "layer_top_mm": { "type": "number", "minimum": 0 },
+    "layer_bottom_mm": { "type": "number", "exclusiveMinimum": 0 },
+    "bulk_density": { "type": "number", "exclusiveMinimum": 0 },
+    "ll15": { "type": "number", "minimum": 0, "maximum": 1 },
+    "dul": { "type": "number", "minimum": 0, "maximum": 1 },
+    "sat": { "type": "number", "minimum": 0, "maximum": 1 },
+    "ph": { "type": "number", "minimum": 0, "maximum": 14 },
+    "oc_pct": { "type": "number", "minimum": 0 },
+    "no3_kg_ha": { "type": "number", "minimum": 0 },
+    "nh4_kg_ha": { "type": "number", "minimum": 0 },
+    "sand_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+    "silt_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+    "clay_pct": { "type": "number", "minimum": 0, "maximum": 100 }
+  },
+  "additionalProperties": true
+}

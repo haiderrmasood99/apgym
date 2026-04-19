@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "APGym Daily Weather",
+  "type": "object",
+  "required": ["site_id", "date", "tmin_c", "tmax_c", "rain_mm", "rad_mj_m2"],
+  "properties": {
+    "site_id": { "type": "string" },
+    "date": { "type": "string", "format": "date" },
+    "tmin_c": { "type": "number" },
+    "tmax_c": { "type": "number" },
+    "rain_mm": { "type": "number", "minimum": 0 },
+    "rad_mj_m2": { "type": "number", "minimum": 0 },
+    "wind_m_s": { "type": "number", "minimum": 0 },
+    "vp_kpa": { "type": "number", "minimum": 0 }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "APGym Simulation Outputs",
+  "type": "object",
+  "required": ["run_id", "site_id", "season_year"],
+  "properties": {
+    "run_id": { "type": "string" },
+    "site_id": { "type": "string" },
+    "season_year": { "type": "integer", "minimum": 1900, "maximum": 2200 },
+    "yield_t_ha": { "type": "number", "minimum": 0 },
+    "biomass_t_ha": { "type": "number", "minimum": 0 },
+    "total_n_applied_kg_ha": { "type": "number", "minimum": 0 },
+    "season_irrigation_mm": { "type": "number", "minimum": 0 },
+    "season_et_mm": { "type": "number", "minimum": 0 },
+    "leaching_kg_ha": { "type": "number", "minimum": 0 },
+    "profit_usd_ha": { "type": "number" }
+  },
+  "additionalProperties": true
+}

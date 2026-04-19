@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "APGym Site Identity",
+  "type": "object",
+  "required": [
+    "site_id",
+    "latitude",
+    "longitude",
+    "elevation_m",
+    "region",
+    "crop",
+    "season_year"
+  ],
+  "properties": {
+    "site_id": { "type": "string", "minLength": 1 },
+    "latitude": { "type": "number", "minimum": -90, "maximum": 90 },
+    "longitude": { "type": "number", "minimum": -180, "maximum": 180 },
+    "elevation_m": { "type": "number" },
+    "region": { "type": "string" },
+    "country": { "type": "string", "default": "US" },
+    "field_area_ha": { "type": "number", "exclusiveMinimum": 0 },
+    "crop": { "type": "string" },
+    "cultivar": { "type": "string" },
+    "season_year": { "type": "integer", "minimum": 1900, "maximum": 2200 }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,15 @@
+{
+  "queries": [
+    {
+      "source_desc": "SURVEY",
+      "sector_desc": "CROPS",
+      "group_desc": "FIELD CROPS",
+      "commodity_desc": "CORN",
+      "statisticcat_desc": "YIELD",
+      "unit_desc": "BU / ACRE",
+      "year__GE": "2015",
+      "agg_level_desc": "COUNTY",
+      "state_name": "ILLINOIS"
+    }
+  ]
+}
