@@ -3,6 +3,9 @@
 from __future__ import annotations
 
 import numpy as np
+import warnings
+
+_RANK_WARNING = getattr(np, "RankWarning", getattr(np.exceptions, "RankWarning", Warning))
 
 
 def rmse(y_true: np.ndarray, y_pred: np.ndarray) -> float:
@@ -34,9 +37,11 @@ def nse(y_true: np.ndarray, y_pred: np.ndarray) -> float:
 
 
 def slope_intercept(y_true: np.ndarray, y_pred: np.ndarray) -> tuple[float, float]:
-    if len(y_true) < 2:
+    if len(y_true) < 2 or np.unique(y_true).size < 2:
         return float("nan"), float("nan")
-    slope, intercept = np.polyfit(y_true, y_pred, deg=1)
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", _RANK_WARNING)
+        slope, intercept = np.polyfit(y_true, y_pred, deg=1)
     return float(slope), float(intercept)
 
 

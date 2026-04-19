@@ -5,6 +5,7 @@ This folder now includes ingestion adapters for:
 - `g2f.py`: harmonize local G2F-style tables into APGym normalized tables.
 - `ssurgo.py`: convert SSURGO horizon attributes into APGym soil profile layers.
 - `nasa_power.py`: fetch NASA POWER daily weather into APGym weather contract format.
+- `nass.py`: normalize NASS Quick Stats yield rows into APGym observed outputs.
 - `observed.py`: normalize observed outcomes from generic tables.
 
 All adapters target the contracts in [`/apgym/data/schemas`](../schemas).
@@ -61,4 +62,10 @@ Include NASS Quick Stats query snapshots in the manifest run:
 
 ```powershell
 python -m apgym.data.ingestion.pipeline --site .\raw\g2f_sites.csv --observed .\raw\g2f_observed.csv --nass-query-json .\apgym\data\ingestion\nass_queries.example.json --nass-api-key YOUR_KEY --output-dir .\benchmark_v1
+```
+
+Normalize NASS yield rows to observed outputs:
+
+```powershell
+python -m apgym.data.ingestion.nass --input .\benchmark_v1\nass_query_0.csv --output .\benchmark_v1\observed_from_nass.csv
 ```

@@ -13,6 +13,7 @@ from apgym.data.ingestion.g2f import (
     ingest_g2f_weather,
 )
 from apgym.data.ingestion.nasa_power import fetch_nasa_power_daily, fetch_weather_for_sites
+from apgym.data.ingestion.nass import normalize_nass_quickstats_yield
 from apgym.data.ingestion.observed import normalize_observed_outputs
 from apgym.data.ingestion.pipeline import assemble_bundle_with_manifest
 from apgym.data.ingestion.public_sources import (
@@ -45,6 +46,7 @@ __all__ = [
     "ingest_g2f_weather",
     "ingest_ssurgo_chorizon",
     "load_nass_queries",
+    "normalize_nass_quickstats_yield",
     "normalize_observed_outputs",
     "validate_dataframe_contract",
 ]
