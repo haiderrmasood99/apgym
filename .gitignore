@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Build and packaging
+build/
+dist/
+*.egg-info/
+
+# APSIM / experiment artifacts
+*.db
+*.sqlite
+*.sqlite3
+*.apsimx.bak
+outputs/
+artifacts/
+runs/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
